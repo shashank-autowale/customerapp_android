@@ -84,34 +84,35 @@
                         android:id="@+id/pick_up_details_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@+id/rel_from"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="Pick Up Details"
-                        android:layout_below="@+id/rel_from"
                         android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/pick_up_details_et"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:background="@android:color/white"
-                        android:ems="9"
-                        android:layout_marginTop="10dp"
                         android:layout_below="@+id/pick_up_details_tv"
                         android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/white"
+                        android:ems="9"
                         android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/to_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@+id/pick_up_details_et"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        android:layout_below="@+id/pick_up_details_et"
                         android:text="To"
                         android:textStyle="bold" />
 
                     <RelativeLayout
+                        android:id="@+id/rel_to"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/to_tv"
@@ -135,6 +136,177 @@
                             android:layout_toRightOf="@+id/to_et"
                             android:background="@android:color/transparent"
                             android:src="@drawable/favorites_button" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel_go_book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rel_to"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp" >
+
+                        <TextView
+                            android:id="@+id/date_tv_go"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/date_sp_go"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/date_tv_go"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/white"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/time_tv_go"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/date_tv_go"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/date_sp_go"
+                            android:text="Time"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/hr_sp_go"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/time_tv_go"
+                            android:layout_alignTop="@+id/date_sp_go"
+                            android:background="@android:color/white"
+                            android:textSize="18sp" />
+
+                        <Spinner
+                            android:id="@+id/min_sp_go"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/date_sp_go"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/hr_sp_go"
+                            android:background="@android:color/white"
+                            android:ems="1"
+                            android:textSize="18sp" />
+
+                        <Spinner
+                            android:id="@+id/ampm_sp_go"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/date_sp_go"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/min_sp_go"
+                            android:background="@android:color/white"
+                            android:textSize="18sp" />
+
+                        <CheckBox
+                            android:id="@+id/return_cb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/time_tv_go"
+                            android:layout_below="@+id/hr_sp_go"
+                            android:layout_marginTop="10dp"
+                            android:text="Return Trip" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel_come_book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rel_go_book"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" >
+
+                        <TextView
+                            android:id="@+id/date_tv_come"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/date_sp_come"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/date_tv_come"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/white"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/time_tv_come"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/date_tv_come"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/date_sp_come"
+                            android:text="Time"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/hr_sp_come"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/time_tv_come"
+                            android:layout_alignTop="@+id/date_sp_come"
+                            android:background="@android:color/white"
+                            android:textSize="18sp" />
+
+                        <Spinner
+                            android:id="@+id/min_sp_come"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/date_sp_come"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/hr_sp_come"
+                            android:background="@android:color/white"
+                            android:ems="1"
+                            android:textSize="18sp" />
+
+                        <Spinner
+                            android:id="@+id/ampm_sp_come"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/date_sp_come"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/min_sp_come"
+                            android:background="@android:color/white"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel_confirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rel_come_book"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp" >
+
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="If you are more than three people" />
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text1"
+                            android:layout_centerHorizontal="true"
+                            android:text="please book another Autowala" />
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/confirm_booking_button_up" />
                     </RelativeLayout>
                 </RelativeLayout>
             </ScrollView>
